@@ -4,6 +4,8 @@ const { JWT_SECRET } = require("../secrets"); // use this secret!
 const bcrypt = require("bcryptjs");
 const User = require("../users/users-model");
 const jwt = require('jsonwebtoken');
+
+
 router.post("/register", validateRoleName, (req, res, next) => {
   /**
     [POST] /api/auth/register { "username": "anna", "password": "1234", "role_name": "angel" }
